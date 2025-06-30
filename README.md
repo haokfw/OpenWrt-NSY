@@ -1,6 +1,6 @@
 <div align="center">
 <img width="768" src="https://cdn.jsdelivr.net/gh/haiibo/OpenWrt/images/openwrt.png"/>
-<h1>OpenWrt — 多设备固件云编译</h1>
+<h1>iStoreOS — 多设备固件云编译</h1>
 
 <img src="https://img.shields.io/github/downloads/haiibo/OpenWrt/total.svg?style=for-the-badge&color=32C955"/>
 <img src="https://img.shields.io/github/stars/haiibo/OpenWrt.svg?style=for-the-badge&color=orange"/>
@@ -12,8 +12,8 @@
 
 
 ## 项目说明 [![](https://img.shields.io/badge/-项目基本介绍-FFFFFF.svg)](#项目说明-)
-- 固件构成：[![Lean](https://img.shields.io/badge/Lede-Lean-ff69b4.svg?style=flat&logo=appveyor)](https://github.com/coolsnowwolf/lede) [![P3TERX](https://img.shields.io/badge/OpenWrt-P3TERX-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/P3TERX/Actions-OpenWrt) [![Flippy](https://img.shields.io/badge/Package-Flippy-orange.svg?style=flat&logo=appveyor)](https://github.com/unifreq/openwrt_packit) [![Haiibo](https://img.shields.io/badge/Build-Haiibo-32C955.svg?style=flat&logo=appveyor)](https://github.com/haiibo/OpenWrt)
-- 项目使用 Github Actions 拉取 [Lean](https://github.com/coolsnowwolf/lede) 的 Openwrt 源码仓库进行云编译
+- 固件构成：[![iStoreOS](https://img.shields.io/badge/iStoreOS-24.10-ff69b4.svg?style=flat&logo=appveyor)](https://github.com/istoreos/istoreos) [![P3TERX](https://img.shields.io/badge/OpenWrt-P3TERX-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/P3TERX/Actions-OpenWrt) [![Flippy](https://img.shields.io/badge/Package-Flippy-orange.svg?style=flat&logo=appveyor)](https://github.com/unifreq/openwrt_packit) [![Haiibo](https://img.shields.io/badge/Build-Haiibo-32C955.svg?style=flat&logo=appveyor)](https://github.com/haiibo/OpenWrt)
+- 项目使用 Github Actions 拉取 [iStoreOS](https://github.com/istoreos/istoreos) 的 24.10 分支源码仓库进行云编译
 - 固件默认管理地址：`192.168.1.1` 默认用户：`root` 默认密码：`password`
 - 提供适配于 ARMv8 电视盒子、Rockchip 平台、树莓派以及 X86 平台设备的 OpenWrt 固件
 - ARMv8 盒子固件分为 [Mini版](https://github.com/haiibo/OpenWrt/releases/tag/ARMv8_MINI) 和 [Plus版](https://github.com/haiibo/OpenWrt/releases/tag/ARMv8_PLUS)，Mini 精简版以科学上网为主，Plus 多功能版插件多适合折腾
@@ -47,7 +47,8 @@
 
 
 ## 近期更新 [![](https://img.shields.io/badge/-近期固件更新-FFFFFF.svg)](#近期更新-)
-🤣努力修复中……
+- 更改源码仓库为 [iStoreOS](https://github.com/istoreos/istoreos)，使用24.10分支
+- 保留原有的设备适配和定制功能
 
 
 ## 插件预览 [![](https://img.shields.io/badge/-固件插件及功能预览-FFFFFF.svg)](#插件预览-)
@@ -226,8 +227,9 @@
 3. 下载源代码，更新 feeds 并安装到本地
 
    ```bash
-   git clone https://github.com/coolsnowwolf/lede
-   cd lede
+   git clone https://github.com/istoreos/istoreos
+   cd istoreos
+   git checkout istoreos-24.10
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    ```
@@ -250,22 +252,24 @@
 
 
 ## 特别提示 [![](https://img.shields.io/badge/-个人免责声明-FFFFFF.svg)](#特别提示-)
-
-- **因精力有限不提供任何技术支持和教程等相关问题解答，不保证完全无 BUG！**
-
-- **本人不对任何人因使用本固件所遭受的任何理论或实际的损失承担责任！**
-
-- **本固件禁止用于任何商业用途，请务必严格遵守国家互联网使用相关法律规定！**
+- 本项目免费开源，无任何质量保证，仅作为技术学习交流使用，请勿用于商业用途，不对使用者构成任何合同或承诺
+- OpenWrt 官方的二次开发系统，如需稳定版，推荐使用 [官方固件](https://downloads.openwrt.org/releases/targets/)
+- 所有基于 OpenWrt 源码的固件请使用 [Breed](https://breed.hackpascal.net/) 或 [UBOOT](https://openwrt.org/docs/techref/bootloader/uboot) 刷写
+- 如有什么问题，建议使用 [issues](https://github.com/haiibo/OpenWrt/issues) 或 [discussions](https://github.com/haiibo/OpenWrt/discussions) 反馈
+- 如需在线更新固件，请参考 [iStoreOS 在线更新教程](https://doc.linkease.com/zh/guide/istoreos/update.html)
+- 由于 iStoreOS 的特性，首次使用可能需要进行额外的设置，请参考 [iStoreOS 文档](https://doc.linkease.com/zh/guide/istoreos/)
 
 
 ## 鸣谢 [![](https://img.shields.io/badge/-跪谢各大佬-FFFFFF.svg)](#鸣谢-)
-| [ImmortalWrt](https://github.com/immortalwrt) | [coolsnowwolf](https://github.com/coolsnowwolf) | [P3TERX](https://github.com/P3TERX) | [Flippy](https://github.com/unifreq) | [Haiibo](https://github.com/haiibo) |
-| :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
-| <img width="100" src="https://avatars.githubusercontent.com/u/53193414"/> | <img width="100" src="https://avatars.githubusercontent.com/u/31687149"/> | <img width="100" src="https://avatars.githubusercontent.com/u/25927179"/> | <img width="100" src="https://avatars.githubusercontent.com/u/39355261"/> | <img width="100" src="https://avatars.githubusercontent.com/u/85640068"/> |
-| [Ophub](https://github.com/ophub) | [SuLingGG](https://github.com/SuLingGG) | [QiuSimons](https://github.com/QiuSimons) | [IvanSolis1989](https://github.com/IvanSolis1989) |
-| <img width="100" src="https://avatars.githubusercontent.com/u/68696949"/> | <img width="100" src="https://avatars.githubusercontent.com/u/22287562"/> | <img width="100" src="https://avatars.githubusercontent.com/u/45143996"/> | <img width="100" src="https://avatars.githubusercontent.com/u/44228691"/> |
-
+- [OpenWrt 官方](https://github.com/openwrt/openwrt)
+- [iStoreOS 团队](https://github.com/istoreos/istoreos)
+- [Lean 大](https://github.com/coolsnowwolf/lede)
+- [P3TERX 大](https://github.com/P3TERX/Actions-OpenWrt)
+- [Flippy 大](https://github.com/unifreq/openwrt_packit)
+- [helloworld](https://github.com/fw876/helloworld)
+- [passwall](https://github.com/xiaorouji/openwrt-passwall)
+- 以及所有 iStoreOS 源码贡献者，插件开发者，文档编写者，辛苦了！
 
 <a href="#readme">
-<img src="https://img.shields.io/badge/-返回顶部-FFFFFF.svg" title="返回顶部" align="right"/>
+    <img src="https://img.shields.io/badge/-返回顶部-FFFFFF.svg" alt="图裂了😂" title="返回顶部" align="right"/>
 </a>

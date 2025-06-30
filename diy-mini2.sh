@@ -202,5 +202,13 @@ tar -xvf rtl8367b.tar.gz
 git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 
 
+# 更改代码仓库为iStoreOS并使用24.10分支
+rm -rf .git
+git init
+git remote add origin https://github.com/istoreos/istoreos.git
+git fetch origin istoreos-24.10
+git checkout -b istoreos-24.10 origin/istoreos-24.10
+
+# 添加额外软件包
 ./scripts/feeds update -a
 ./scripts/feeds install -a
