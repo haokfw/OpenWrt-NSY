@@ -6,8 +6,8 @@ on:
     - cron: 0 20 * * *
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/istoreos/istoreos
+  REPO_BRANCH: istoreos-24.10
   CONFIG_FILE: configs/armv8-nowifi.config
   DIY_SCRIPT: diy-mini2.sh
   CLASH_KERNEL: arm64
@@ -216,7 +216,7 @@ jobs:
         token: ${{ env.GITHUB_TOKEN }}
         artifacts: ${{ env.FIRMWARE_PATH }}/*
         body: |
-          **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}**
+          **This is iStoreOS Firmware for ${{ env.FIRMWARE_TAG }}**
           ### 📒 固件信息
           - 💻 平台架构: ${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }} (rk33xx, rk35xx)
           - ⚽ 固件源码: ${{ env.REPO_URL }}
